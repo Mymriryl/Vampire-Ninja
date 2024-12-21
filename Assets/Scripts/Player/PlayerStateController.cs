@@ -35,7 +35,7 @@ namespace IPlayerState
       _spr = GetComponent<SpriteRenderer>();
 
       _gameManager = GameObject.FindWithTag("GameController").GetComponent<GameManager>();
-       _bossManager = GameObject.FindWithTag("BossManager").GetComponent<BossManager>();
+      //_bossManager = GameObject.FindWithTag("BossManager").GetComponent<BossManager>();
 
       originalHitBoxOffset = _col.offset;
       originalHitBoxSize = _col.size;
@@ -186,8 +186,8 @@ namespace IPlayerState
         _gameManager.ReturnToCheckPoint(respawnDelay);
         _audioManager.Play("Smoke3", false, Vector2.zero);
 
-        if (_bossManager.alreadyTriggered)
-          _bossManager.ResetBossFight();
+      // if (_bossManager.alreadyTriggered)
+         // _bossManager.ResetBossFight();
 
         Invoke(nameof(ReturnPlayerToLife), respawnDelay);
     }
