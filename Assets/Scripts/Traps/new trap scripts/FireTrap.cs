@@ -27,7 +27,7 @@ public class FireTrap : MonoBehaviour
         if (_isInCooldown)
             return;
 
-        Debug.Log("ativando trap");
+        //Debug.Log("ativando trap");
         StartCoroutine(CdDelay());
         
 
